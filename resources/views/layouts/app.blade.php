@@ -32,11 +32,10 @@
             <li>
                 <a href="{{ route('dashboard') }}"
                    class="flex items-center gap-3 text-gray-700 hover:text-indigo-600 font-semibold transition">
-                    <!-- Icono Home -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6m-7 11h8a2 2 0 002-2v-5a2 2 0 00-2-2h-8a2 2 0 00-2 2v5a2 2 0 002 2z"/>
-                    </svg>
+                    <!-- Icono Home --> 
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" class="h-6 w-6" data-name="Layer 1" viewBox="0 0 24 24">
+                  <path d="M17,7h4v1h-4v-1Zm0,4h4v-1h-4v1Zm0,3h4v-1h-4v1Zm0,3h4v-1h-4v1Zm7-11.5v15.5H0V5.5c0-1.378,1.121-2.5,2.5-2.5H21.5c1.379,0,2.5,1.122,2.5,2.5Zm-1,0c0-.827-.673-1.5-1.5-1.5H2.5c-.827,0-1.5,.673-1.5,1.5v14.5H23V5.5Zm-8,6.5c0,3.309-2.691,6-6,6s-6-2.691-6-6,2.691-6,6-6,6,2.691,6,6Zm-6,5c1.198,0,2.284-.441,3.146-1.146l-3.646-3.646V7.051c-2.52,.255-4.5,2.364-4.5,4.949,0,2.757,2.243,5,5,5Zm5-5c0-2.586-1.98-4.694-4.5-4.949v4.742l3.354,3.354c.705-.862,1.146-1.948,1.146-3.146Z"/>
+                </svg>
                     Dashboard
                 </a>
             </li>
@@ -44,10 +43,10 @@
                 <a href="{{ route('vehiculos.index') }}"
                    class="flex items-center gap-3 text-gray-700 hover:text-indigo-600 font-semibold transition">
                     <!-- Icono lista -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                              d="M3 10h18M3 14h18M6 18h12M6 6h12"/>
-                    </svg>
+                   <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="25" height="25" viewBox="0 0 24 24"><path d="M4.5,9c.276,0,.5-.224,.5-.5v-1.5h11.782l-.182-.637c-.063-.223-.134-.443-.212-.662l-1.443-4.042c-.354-.993-1.3-1.659-2.354-1.659H4.41c-1.054,0-2,.667-2.354,1.659L.612,5.701c-.406,1.137-.612,2.325-.612,3.531v3.768H2v2h3v-3H1v-2.768c0-.755,.089-1.502,.266-2.232h2.734v1.5c0,.276,.224,.5,.5,.5Zm-.5,4v1h-1v-1h1ZM2.997,1.995c.213-.595,.781-.995,1.413-.995H12.59c.632,0,1.2,.4,1.413,.995l1.43,4.005H1.566L2.997,1.995ZM24,18.232c0-1.206-.206-2.394-.612-3.531l-1.443-4.042c-.354-.993-1.3-1.659-2.354-1.659H11.41c-1.054,0-2,.667-2.354,1.659l-1.443,4.042c-.406,1.137-.612,2.325-.612,3.531v3.768h2v2h3v-2h7v2h3v-2h2v-3.768Zm-14.003-7.237c.213-.595,.781-.995,1.413-.995h8.181c.632,0,1.2,.4,1.413,.995l1.43,4.005H8.566l1.43-4.005Zm1.003,12.005h-1v-1h1v1Zm10,0h-1v-1h1v1Zm2-2H8v-2.768c0-.755,.089-1.502,.266-2.232h2.734v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h7v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h2.734c.177,.73,.266,1.477,.266,2.232v2.768Z"/></svg>
+
+
+
                     Vehículos
                 </a>
             </li>
