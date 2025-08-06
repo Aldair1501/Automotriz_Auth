@@ -5,6 +5,8 @@ use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\LoginLogController;
+
 
 
 Route::get('/', function () {
@@ -29,11 +31,9 @@ Route::get('/', function () {
     Route::get('/vehiculos', [VehiculoController::class, 'index'])->name('vehiculos.index');
 
 
-    // Historial de inicios de sesión
-    Route::get('/login-logs', function () {
-     $logs = auth()->user()->loginLogs()->latest()->paginate(10);
-    return view('login-logs', compact('logs'));
-    })->name('login-logs');
+    // Pega aquí la ruta protegida de login-logs
+    Route::get('/login-logs', [LoginLogController::class, 'index'])->name('login-logs');
+
 
 });
 
