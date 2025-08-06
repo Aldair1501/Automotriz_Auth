@@ -4,12 +4,17 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\GoogleController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+    // RUTAS PARA LOGIN CON GOOGLE
+    Route::get('/auth/google/redirect', [GoogleController::class, 'redirectToGoogle']);
+    Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
-Route::middleware(['auth', 'verified'])->group(function () {
+    // RUTAS PROTEGIDAS CON LOGIN NORMAL
+    Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // Perfil usuario

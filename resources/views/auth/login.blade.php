@@ -43,5 +43,14 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+
+    <div class="mt-6">
+    <a href="{{ url('/auth/google/redirect') }}"
+       class="w-full inline-flex items-center justify-center px-4 py-3 bg-white border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 transition duration-150 ease-in-out">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-5 h-5 mr-2">
+        Iniciar sesión con Google
+    </a>
+</div>
+
     </form>
 </x-guest-layout>
