@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\GoogleController;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,6 +27,14 @@ Route::get('/', function () {
     Route::get('/vehiculos/crear', [VehiculoController::class, 'create'])->name('vehiculos.create');
     Route::post('/vehiculos', [VehiculoController::class, 'store'])->name('vehiculos.store');
     Route::get('/vehiculos', [VehiculoController::class, 'index'])->name('vehiculos.index');
+
+
+    // Historial de inicios de sesión
+    Route::get('/login-logs', function () {
+     $logs = auth()->user()->loginLogs()->latest()->paginate(10);
+    return view('login-logs', compact('logs'));
+    })->name('login-logs');
+
 });
 
 require __DIR__.'/auth.php';

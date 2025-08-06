@@ -36,7 +36,23 @@
             Nuevo Vehículo
         </a>
     </li>
+
+<li>
+    <a href="{{ route('login-logs') }}"
+       class="flex items-center gap-3 text-gray-700 hover:text-indigo-600 font-semibold transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Historial de acceso
+    </a>
+</li>
+
+
+
 </ul>
+
+
 
 <!-- Separador -->
 <hr class="my-6 border-gray-200" />
