@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
 
         LoginLog::create([
             'user_id' => auth()->id(),
-            'login_method' => 'basic', // o 'encrypted' si es con hash
+            'login_method' => auth()->user()->password_plain ? 'plain' : 'encrypted',
             'ip_address' => request()->ip(),
             'user_agent' => request()->userAgent(),
         ]);

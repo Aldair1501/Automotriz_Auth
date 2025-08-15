@@ -6,17 +6,30 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\LoginLogController;
+use App\Http\Controllers\PlainLoginController;// login básico (sin cifrado)
 
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+    // --- Login Básico (Texto plano) ---
+Route::get('/login-plain', [PlainLoginController::class, 'showLoginForm'])
+    ->name('login.plain.form');
+
+Route::post('/login-plain', [PlainLoginController::class, 'login'])
+    ->name('login.plain');
+
+Route::post('/logout-plain', [PlainLoginController::class, 'logout'])
+    ->name('logout.plain');
+
     // RUTAS PARA LOGIN CON GOOGLE
     Route::get('/auth/google/redirect', [GoogleController::class, 'redirectToGoogle']);
     Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
-    // RUTAS PROTEGIDAS CON LOGIN NORMAL
+    // RUTAS para login cifrado
     Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 

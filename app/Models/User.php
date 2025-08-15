@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'password_plain', // <-- solo si vas a asignarla masivamente
         'google_id',
         'avatar',
 
