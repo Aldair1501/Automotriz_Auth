@@ -10,7 +10,7 @@
 
     <!-- Encabezado -->
     <header class="mb-8 text-center">
-        <h1 class="text-3xl md:text-4xl font-bold text-red-500 mb-1">Sistema de Gestión de Inventario</h1>
+        <h1 class="text-3xl md:text-4xl font-bold text-red-500 mb-1">Sistema de Gestión de Inventario automotriz</h1>
         <p class="text-gray-400 text-sm">Selecciona tu método de autenticación</p>
     </header>
 

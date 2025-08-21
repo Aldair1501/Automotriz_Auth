@@ -28,23 +28,43 @@ class RegisteredUserController extends Controller
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request): RedirectResponse
-    {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+{
+    $request->validate([
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+        'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        'auth_method' => ['required', 'in:plain,encrypted'],
+    ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    $authMethod = $request->auth_method;
 
-        event(new Registered($user));
+    $userData = [
+        'name' => $request->name,
+        'email' => $request->email,
+    ];
 
-        Auth::login($user);
-
-        return redirect(route('dashboard', absolute: false));
+    if ($authMethod === 'plain') {
+        $userData['password'] = null;
+        $userData['password_plain'] = $request->password;
+    } else {
+        $userData['password'] = Hash::make($request->password);
+        $userData['password_plain'] = null;
     }
+
+    $user = User::create($userData);
+
+    // Registrar método de autenticación en LoginLog
+    \App\Models\LoginLog::create([
+        'user_id' => $user->id,
+        'login_method' => $authMethod,
+        'ip_address' => $request->ip(),
+        'user_agent' => $request->userAgent(),
+    ]);
+
+    event(new Registered($user));
+    Auth::login($user);
+
+    return redirect(route('dashboard', absolute: false));
+}
+
 }
