@@ -24,10 +24,10 @@ El sistema incluye **tres métodos de autenticación**:
 ---
 
 ## 🛠️ Tecnologías Implementadas
-- **Framework Backend:** Laravel 10  
+- **Framework Backend:** Laravel 12
 - **Lenguaje de programación:** PHP 8+  
 - **Base de datos:** MySQL  
-- **Frontend:** Blade + Bootstrap  
+- **Frontend:** TailWindcss
 - **Servidor Web:** Apache  
 
 ---
@@ -36,7 +36,7 @@ El sistema incluye **tres métodos de autenticación**:
 - [Laravel](https://laravel.com/) → Framework principal.  
 - [Laravel UI](https://github.com/laravel/ui) → Login básico y registro.  
 - [Laravel Socialite](https://laravel.com/docs/socialite) → Autenticación con Google OAuth.  
-- [Bootstrap 5](https://getbootstrap.com/) → Estilos y diseño responsivo.  
+- [TailWindcss](https://tailwindcss.com/) → Estilos y diseño responsivo.  
 
 ---
 
