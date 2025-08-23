@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido</title>
+
+    <!-- Carga TailwindCSS desde CDN para dar estilos rápidos -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+
+         /* Estilo general del cuerpo: fondo degradado y fuente sans-serif */
         body {
             background: linear-gradient(135deg, #000000, #1c1c1c, #2e2e2e);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+         /* Animación de entrada suave para el contenido */
         .fade-in {
             animation: fadeIn 1s ease-in-out;
         }
@@ -20,6 +26,8 @@
         .btn-hover {
             transition: all 0.3s ease-in-out;
         }
+
+        /* Efecto de los botones al hacer hover: levanta y genera sombra */
         .btn-hover:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 25px rgba(255, 11, 85, 0.5);
@@ -56,8 +64,7 @@
         </div>
 
   
-
-    
+ 
 
 </body>
 </html>
