@@ -36,7 +36,7 @@ Route::post('/logout', [PlainLoginController::class, 'logout'])
 
 /*
 |--------------------------------------------------------------------------
-| Login con Google
+| Login con Acceso a Google
 |--------------------------------------------------------------------------
 */
 Route::get('/auth/google/redirect', [GoogleController::class, 'redirectToGoogle']);
