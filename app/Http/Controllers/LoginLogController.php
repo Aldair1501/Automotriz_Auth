@@ -8,17 +8,26 @@ use Illuminate\View\View;
 
 class LoginLogController extends Controller
 {
+    /**
+     * Muestra el historial de logs de inicio de sesión.
+     * Solo el usuario con ID = 1 (administrador) puede acceder.
+     */
     public function index(Request $request): View
     {
+        // Obtiene el usuario autenticado
         $user = $request->user();
 
-    // Solo permitir al usuario con ID 1
-    if ($user->id !== 1) {
-        abort(403, 'Acceso no autorizado');
-    }
+        // Verifica que solo el usuario con ID 1 tenga acceso
+        // Si no cumple la condición, retorna error 403 (Prohibido)
+        if ($user->id !== 1) {
+            abort(403, 'Acceso no autorizado');
+        }
 
-    $logs = LoginLog::latest()->paginate(10);
+        // Obtiene los registros de inicio de sesión ordenados del más reciente al más antiguo
+        // y los pagina de 10 en 10
+        $logs = LoginLog::latest()->paginate(10);
 
-    return view('login-logs', compact('logs'));
+        // Retorna la vista 'login-logs' enviando los registros paginados
+        return view('login-logs', compact('logs'));
     }
 }
