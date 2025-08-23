@@ -1,7 +1,7 @@
 # 🚗 Sistema de Autenticación con Gestión de Inventario Automotriz
 
 ## 📌 Descripción del Proyecto
-Este proyecto consiste en el desarrollo de un **sistema web en Laravel** que implementa diferentes **métodos de autenticación** bajo una arquitectura **cliente-servidor**, en el contexto de la gestión de un **inventario automotriz**.  
+Este proyecto consiste en el desarrollo de un sistema que implementa diferentes **métodos de autenticación** bajo una arquitectura **cliente-servidor**, en el contexto de la gestión de un **inventario automotriz**.  
 El objetivo es **simular vulnerabilidades de seguridad** y aplicar **técnicas de protección** para reforzar la seguridad en aplicaciones reales.  
 
 ---
@@ -28,7 +28,7 @@ El sistema incluye **tres métodos de autenticación**:
 - **Lenguaje de programación:** PHP 8+  
 - **Base de datos:** MySQL  
 - **Frontend:** Blade + Bootstrap  
-- **Servidor Web:** Apache / Nginx  
+- **Servidor Web:** Apache  
 
 ---
 
@@ -42,7 +42,7 @@ El sistema incluye **tres métodos de autenticación**:
 
 ## 🗄️ Sistema de Gestión de Base de Datos
 - **Motor:** MySQL  
-- **Herramienta de administración:** phpMyAdmin o MySQL Workbench  
+- **Herramienta de administración:** phpMyAdmin
 
 ---
 
@@ -54,34 +54,19 @@ El sistema incluye **tres métodos de autenticación**:
 ---
 
 ## 🖼️ Capturas de Pantalla
-*(Aquí se deben agregar las imágenes del sistema en funcionamiento. Por ejemplo:)*  
 
-- **Pantalla de login con contraseñas planas**  
-  ![Login básico](docs/images/login-planas.png)  
+ **Pantalla de inicio**  
+  ![Login seguro con Bcrypt](docs/images/inicio.png) 
 
-- **Pantalla de login con Bcrypt**  
-  ![Login seguro con Bcrypt](docs/images/login-bcrypt.png)  
+- **Pantalla de registro con las tres opciones para registrarse**  
+  ![Login seguro con Bcrypt](docs/images/registro.png)  
 
-- **Pantalla de login con Google**  
-  ![Login con Google](docs/images/login-google.png)  
+- **Pantalla de login con las tres opciones de inicio de sesion**  
+  ![Login básico](docs/images/login.png)  
 
----
 
-## 🎥 Demostración Visual de Cada Método
-Se recomienda incluir **GIFs o capturas de pantalla** para demostrar cada inicio de sesión en acción:  
+- **Base de datos donde podemos ver como se almacenan las 3 forma de iniciar sesion**  
+ **Encriptada, plano y con google**  
+  ![Login con Google](docs/images/db.png)  
 
-- **Login inseguro con contraseñas planas**: ejemplo de vulnerabilidad.  
-- **Login con Bcrypt**: demostración del cifrado seguro.  
-- **Login con Google**: redirección y autenticación mediante OAuth.  
 
----
-
-## 📌 ¿Cómo agregar imágenes al README?
-Para agregar imágenes al README debes:  
-
-1. Crear una carpeta en tu proyecto llamada **`docs/images/`** (o la ruta que prefieras).  
-2. Guardar dentro de ella las imágenes o capturas.  
-3. Insertarlas en el README con la sintaxis de Markdown:  
-
-```markdown
-![Texto alternativo](docs/images/nombre-de-la-imagen.png)
