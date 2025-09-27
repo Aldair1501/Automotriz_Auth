@@ -36,7 +36,12 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $vehiculo->modelo }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $vehiculo->anio }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Q{{ number_format($vehiculo->precio, 2) }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $vehiculo->estado }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $vehiculo->estado === 'Disponible' ?'available' : $vehiculo->estado }}
+</td>
+
+
+
+
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $vehiculo->kilometraje }} km</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $vehiculo->color }}</td>
                     </tr>
