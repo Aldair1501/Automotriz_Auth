@@ -21,7 +21,7 @@ return new class extends Migration
     $table->integer('kilometraje');
     $table->string('color');
     $table->timestamps();
-     $table->softDeletes(); //eliminacion logica
+     $table->softDeletes(); // Eliminacion logica a la tabla vehiculos 
 });
     }
 
