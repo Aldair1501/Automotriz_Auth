@@ -50,8 +50,9 @@ El sistema incluye **tres métodos de autenticación**:
 ---
 
 ## 🛠️ Tecnologías Implementadas
-- **Framework Backend:** Laravel 12
-- **Lenguaje de programación:** PHP 8+  
+- **Framework Backend:** Laravel 12 
+- **Lenguaje de programación:** PHP 8.2+  
+
 - **Base de datos:** MySQL  
 - **Frontend:** TailWindcss
 - **Servidor Web:** Apache  

@@ -48,16 +48,18 @@
         </header>
 
         <main class="p-6 overflow-auto">
+            <!-- Si existe la variable $header, se muestra dentro de este contenedor -->
             @isset($header)
                 <div class="mb-6 border-b pb-4 border-gray-300">
                     {{ $header }}
                 </div>
             @endisset
 
+             <!-- Verifica si existe una sección llamada 'content' definida en la vista -->
             @hasSection('content')
-                @yield('content')
+                @yield('content')<!-- Inserta el contenido definido en la sección 'content' -->
             @else
-                {{ $slot }}
+                {{ $slot }}<!-- Si no existe la sección, muestra el contenido por defecto -->
             @endif
         </main>
     </div>
