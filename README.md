@@ -6,6 +6,32 @@ El objetivo es **simular vulnerabilidades de seguridad** y aplicar **técnicas d
 
 ---
 
+👥 Usuarios del Sistema
+
+Visitante
+
+Consulta del catálogo público de vehículos (solo lectura).
+
+Administrador
+
+CRUD completo del inventario automotriz.
+
+Eliminación lógica de registros (soft delete).
+
+Super-administrador
+
+Gestión completa de usuarios del sistema.
+
+Acceso a dashboard de métricas de auditoría y logging.
+
+Todos los privilegios de administrador.
+
+---
+📦 Inventario Automotriz
+
+Manejo del CRUD completo del inventario, según permisos de usuario.
+---
+
 ## 🔐 Métodos de Autenticación Implementados
 El sistema incluye **tres métodos de autenticación**:
 
